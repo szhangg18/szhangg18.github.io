@@ -7,109 +7,31 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
   </head>
   <body>
-    <h1>My First Heading 3</h1>
+    <h1>My First Heading</h1>
     <div id="vis"></div>
 
     <script type="text/javascript">
       var yourVlSpec = {
-        {
-  "$schema": "https://vega.github.io/schema/vega/v5.json",
-  "background": "white",
-  "padding": 5,
-  "width": 800,
-  "height": 400,
-  "title": {
-    "text": "Average Temperature Increase Between 2000-2019 Average to 1959 to 1980 Average",
-    "frame": "group"
-  },
-  "data": [
-    {
-      "name": "source_1",
-      "url": "https://raw.githubusercontent.com/szhangg18/fit3179/main/Temp_Data_Cleanedv2.csv",
-      "format": {"type": "csv", "delimiter": ","}
-    },
-    {
-      "name": "source_0",
-      "url": "https://raw.githubusercontent.com/JiazhouLiu/FIT3179/main/VegaLite/3_choropleth_map/js/ne_110m_admin_0_countries.topojson",
-      "format": {
-        "type": "topojson",
-        "feature": "ne_110m_admin_0_countries",
-        "parse": {}
-      },
-      "transform": [
-        {
-          "type": "formula",
-          "expr": "datum[\"properties\"] && datum[\"properties\"][\"NAME\"]",
-          "as": "properties.NAME"
+        $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
+        description: 'A simple bar chart with embedded data.',
+        data: {
+          values: [
+            {a: 'A', b: 28},
+            {a: 'B', b: 55},
+            {a: 'C', b: 43},
+            {a: 'D', b: 91},
+            {a: 'E', b: 81},
+            {a: 'F', b: 53},
+            {a: 'G', b: 19},
+            {a: 'H', b: 87},
+            {a: 'I', b: 52}
+          ]
         },
-        {
-          "type": "lookup",
-          "from": "source_1",
-          "key": "Area",
-          "fields": ["properties.NAME"],
-          "values": ["Change"]
-        },
-        {
-          "type": "filter",
-          "expr": "isValid(datum[\"Change\"]) && isFinite(+datum[\"Change\"])"
+        mark: 'bar',
+        encoding: {
+          x: {field: 'a', type: 'ordinal'},
+          y: {field: 'b', type: 'quantitative'}
         }
-      ]
-    }
-  ],
-  "projections": [
-    {
-      "name": "projection",
-      "size": {"signal": "[width, height]"},
-      "fit": {"signal": "data('source_0')"},
-      "type": "equalEarth"
-    }
-  ],
-  "marks": [
-    {
-      "name": "marks",
-      "type": "shape",
-      "style": ["geoshape"],
-      "from": {"data": "source_0"},
-      "encode": {
-        "update": {
-          "fill": {"scale": "color", "field": "Change"},
-          "tooltip": {
-            "signal": "{\"Country\": isValid(datum[\"properties.NAME\"]) ? datum[\"properties.NAME\"] : \"\"+datum[\"properties.NAME\"], \"Change\": format(datum[\"Change\"], \"\")}"
-          },
-          "ariaRoleDescription": {"value": "geoshape"},
-          "description": {
-            "signal": "\"Change: \" + (format(datum[\"Change\"], \"\")) + \"; Country: \" + (isValid(datum[\"properties.NAME\"]) ? datum[\"properties.NAME\"] : \"\"+datum[\"properties.NAME\"])"
-          }
-        }
-      },
-      "transform": [{"type": "geoshape", "projection": "projection"}]
-    }
-  ],
-  "scales": [
-    {
-      "name": "color",
-      "type": "threshold",
-      "domain": [-1, -0.5, 0, 0.5, 1],
-      "range": [
-        "#002947",
-        "#6BBCD1",
-        "#FFF2CE",
-        "#FEB938",
-        "#FD9415",
-        "#E23201"
-      ],
-      "interpolate": "hcl"
-    }
-  ],
-  "legends": [
-    {
-      "fill": "color",
-      "labelOverlap": "greedy",
-      "symbolType": "circle",
-      "title": "Change"
-    }
-  ]
-}
       };
       vegaEmbed('#vis', yourVlSpec);
     </script>
