@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Average Temperature Increase Between 2000-2019 Average to 1959 to 1980 Average",
+  "title": "",
   "width": 800,
   "height": 400,
   "projection": {"type": "equalEarth"},
