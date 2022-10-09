@@ -6,7 +6,7 @@
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.8"></script>
 </head>
 <body>
-  <h1>Week 9 Homework only</h1>
+  <h1>Week 9 Homework only 2</h1>
   <div id="vis"/>
   <script>
     const spec = {
@@ -55,7 +55,8 @@
     ]
   },
   "config": {}
-}
-</script>
+};
+    vegaEmbed("#vis", spec, {mode: "vega-lite"}).then(console.log).catch(console.warn);
+  </script>
 </body>
 </html>
