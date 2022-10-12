@@ -1,0 +1,34 @@
+p {
+    font-style: bold;
+}
+
+#para4 {
+    text-align: center;
+    font-family: Fondamento;
+}
+
+.paragroup {
+    color: blueviolet;
+    font-family: Roboto;
+    text-align: right;
+}
+
+.txt-test2{
+    font-family: Segoe UI;
+    color: blue;
+}
+
+.txt-test3{
+    color: red;
+    border: 2px dashed red;
+}
+
+.inner img{
+    height: 50vh;
+}
+
+.outer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
