@@ -1,23 +1,42 @@
 <html>
-  <head>
-    <title>Embedding Vega-Lite</title>
-    <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.5.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
-  </head>
-  <body>
-    <h1>Week 10 Homework</h1>
-    <h2>Average Change in Temperature Between 1960 to 1980 and 1960 to 2018</h2>
-    <div id="week9"></div>
-    <h2>Average Increase in Temperature Per Year Compared to 1960 to 1980 Average Temperature</h2>
-    <div id="week10"></div>
-    
-    <script type="text/javascript">
-      var vis1 = "https://raw.githubusercontent.com/szhangg18/szhangg18.github.io/main/visualization.vl.json";
-      vegaEmbed('#week10', vis1);
-      
-      var vis2 = "https://raw.githubusercontent.com/szhangg18/szhangg18.github.io/main/visualization.vl%20(1).json";
-      vegaEmbed('#week9', vis2);
-    </script>
-  </body>
+    <head>
+        <title> CSS tutorial</title>
+        <link rel = "stylesheet" href = "https://github.com/szhangg18/szhangg18.github.io/blob/main/mystyle.css">
+    </head>
+
+    <body>
+        <div>
+            <p style  = "color:blue; font-family: Tahoma;">Paragraph 1</p>
+            <div class = "paragroup">
+                <p>Paragraph 2</p>
+                <p>Paragraph 3</p>
+            </div> 
+            <p id = "para4">Paragraph 4</p>
+
+            <link href="https://fonts.googleapis.com/css2?family=Fondamento&family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+        </div>
+        <p>
+            test1 <span class = 'txt-test2'>test2</span> <span class = 'txt-test3'>test3</span> <span class = 'txt-test2'>test4</span>
+        </p>
+
+        <div class = "outer">
+            <div class = "inner">
+                <img src = "https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmFuZG9tfGVufDB8fDB8fA%3D%3D&w=1000&q=80"/>
+                <p>dog1</p>
+            </div>
+            <div class = "inner">
+                <img src = "https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmFuZG9tfGVufDB8fDB8fA%3D%3D&w=1000&q=80"/>
+                <p>dog2</p>
+            </div>
+            <div class = "inner">
+                <img src = "https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmFuZG9tfGVufDB8fDB8fA%3D%3D&w=1000&q=80"/>
+                <p>dog3</p>
+            </div>
+            <div class = "inner">
+                <img src = "https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmFuZG9tfGVufDB8fDB8fA%3D%3D&w=1000&q=80"/>
+                <p>dog4</p>
+            </div>
+        </div>
+    </body>
 </html>
