@@ -1,3 +1,7 @@
+html, body {
+    background-color: "#42e6f5";
+}
+
 p {
     font-style: bold;
 }
