@@ -8,7 +8,9 @@
   "mark": {"type": "line", "interpolate": "monotone"},
   "encoding": {
     "x": {"field": "Year", "type": "temporal"},
-    "y": {"field": "Change", "type": "quantitative"}
+    "y": {"field": "Change", "type": "quantitative"},
+    "tooltip": [{"field": "Year", "type": "temporal", "title": "Year"},
+    {"field": "Change", "type": "quantitative"}]
   },
   "config": {}
 }
