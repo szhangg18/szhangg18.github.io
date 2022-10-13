@@ -9,7 +9,7 @@
 
     <body>
         <div>
-            <p style  = "color:purple; font-family: Tahoma; font-size: 25px; font-alignment: center;">Global Temperature Trends Since 1960</p>
+            <p style  = "color:purple; font-family: Tahoma; font-size: 30px; text-alignment: center;">Global Temperature Trends Since 1960</p>
 
             <link href="https://fonts.googleapis.com/css2?family=Fondamento&family=Roboto+Condensed&display=swap" rel="stylesheet">
 
@@ -21,6 +21,7 @@
 
         <div class = "outer">
             <div class = "inner">
+                <h1>Graph 1</h1>
                 <div id="week9"></div>
                 <p>dog1</p>
             </div>
@@ -29,7 +30,7 @@
                 <p>dog2</p>
             </div>
             <div class = "inner">
-                <img src = "https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmFuZG9tfGVufDB8fDB8fA%3D%3D&w=1000&q=80"/>
+                <div id = "line"></div>
                 <p>dog3</p>
             </div>
             <div class = "inner">
@@ -44,6 +45,9 @@
       
             var vis2 = "https://raw.githubusercontent.com/szhangg18/szhangg18.github.io/main/visualization.vl%20(1).json";
             vegaEmbed('#week9', vis2);
+            
+            var vis3 = "https://raw.githubusercontent.com/szhangg18/szhangg18.github.io/main/visualization.vl%20(2).json";
+            vegaEmbed('#line', vis3);
         </script>
     </body>
 </html>
