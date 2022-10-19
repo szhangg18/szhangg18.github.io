@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Yearly 5 Year Moving Average of Change in Temperature Compared to Baseline",
-  "width": 600,
-  "height": 400,
+  "title": "Yearly 10 Year Moving Average of Change in Temperature Compared to Baseline",
+  "width": 800,
+  "height": 500,
   "background": "#e0e0da",
   "data": {
     "url": "https://raw.githubusercontent.com/szhangg18/szhangg18.github.io/main/countryYearsMA2.csv"
