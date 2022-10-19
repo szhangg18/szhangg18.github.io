@@ -5,14 +5,14 @@
   "height": 400,
   "background": "#42e6f5",
   "data": {
-    "url": "https://raw.githubusercontent.com/szhangg18/fit3179/main/countryYearsMA.csv"
+    "url": "https://raw.githubusercontent.com/szhangg18/szhangg18.github.io/main/countryYearsMA2.csv"
   },
   "transform": [
     {
       "lookup": "country",
       "from": {
         "data": {
-          "url": "https://raw.githubusercontent.com/JiazhouLiu/FIT3179/main/VegaLite/3_choropleth_map/js/ne_110m_admin_0_countries.topojson",
+          "url": "https://raw.githubusercontent.com/szhangg18/fit3179/main/ne_110m_admin_0_countries.json",
           "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
         },
         "key": "properties.NAME",
@@ -24,10 +24,10 @@
   "params": [
     {
       "name": "year",
-      "value": 1965,
+      "value": 1970,
       "bind": {
         "input": "range",
-        "min": 1965,
+        "min": 1970,
         "max": 2018,
         "step": 1,
         "name": "Select the year:"
@@ -42,7 +42,7 @@
       "type": "quantitative",
       "scale": {
         "type": "threshold",
-        "domain": [-0.4, -0.2, 0, 0.2, 0.4, 0.6],
+        "domain": [-0.6, -0.3, 0, 0.3, 0.6, 0.9],
         "range": [
           "#002947",
           "#6BBCD1",
