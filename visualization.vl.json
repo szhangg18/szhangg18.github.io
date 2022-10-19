@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Yearly 10 Year Moving Average of Change in Temperature Compared to Baseline",
+  "title": {"text: "Yearly 10 Year Moving Average of Change in Temperature Compared to Baseline", "fontSize": 20, "color": "#fc3f26"},
   "width": 600,
   "height": 400,
   "background": "#e0e0da",
