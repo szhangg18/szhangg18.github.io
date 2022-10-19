@@ -2,7 +2,7 @@
   "title": "Average Change in Temperature From Baseline",
   "width": 300,
   "height": 300,
-  "background": "#f2f2f0",
+  "background": "#e0e0da",
   "data": {
     "url": "https://raw.githubusercontent.com/szhangg18/szhangg18.github.io/main/yearlyAverage.csv"
   },
