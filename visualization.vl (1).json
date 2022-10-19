@@ -14,7 +14,7 @@
       "lookup": "properties.NAME",
       "from": {
         "data": {
-          "url": "https://raw.githubusercontent.com/szhangg18/fit3179/main/Temp_Data_Cleanedv2.csv"
+          "url": "https://raw.githubusercontent.com/szhangg18/szhangg18.github.io/main/Vis2NewData.csv"
         },
         "key": "Area",
         "fields": ["Change"]
