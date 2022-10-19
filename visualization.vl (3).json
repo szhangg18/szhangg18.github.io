@@ -1,5 +1,5 @@
 {
-  "title": {"text":"Number of Countries Below the Baseline", "fontSize": 20, "color": "#fc3f26"}
+  "title": {"text":"Number of Countries Below the Baseline", "fontSize": 20, "color": "#fc3f26"},
   "width": 500,
   "height": 300,
   "background": "#e0e0da",
