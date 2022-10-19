@@ -1,0 +1,23 @@
+{
+  "title": "Number of Countries Below the Baseline",
+  "width": 300,
+  "height": 300,
+  "background": "#e0e0da",
+  "data": {
+    "url": "https://raw.githubusercontent.com/szhangg18/szhangg18.github.io/main/underbaseData.csv"
+  },
+  "mark": {"type": "line", "interpolate": "monotone"},
+  "encoding": {
+    "x": {"field": "year", "type": "temporal", "axis": {"grid": false}},
+    "y": {
+      "field": "underbase",
+      "type": "quantitative",
+      "axis": {"grid": false}
+    },
+    "tooltip": [
+      {"field": "Year", "type": "temporal", "title": "Year"},
+      {"field": "Change", "type": "quantitative"}
+    ]
+  },
+  "config": {}
+}
