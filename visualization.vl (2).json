@@ -1,6 +1,7 @@
 {
-  "title": "Average Change in Temperature From Baseline",
-  "width": 300,
+  "title": "",
+  "title": {"text":"Average Change in Temperature From Baseline by Year", "fontSize": 16, "color": "#878787"},
+  "width": 500,
   "height": 300,
   "background": "#e0e0da",
   "data": {
