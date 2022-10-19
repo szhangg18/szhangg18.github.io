@@ -15,8 +15,8 @@
       "axis": {"grid": false}
     },
     "tooltip": [
-      {"field": "Year", "type": "temporal", "title": "Year"},
-      {"field": "Change", "type": "quantitative"}
+      {"field": "year", "type": "temporal", "title": "Year"},
+      {"field": "underbase", "type": "quantitative"}
     ]
   },
   "config": {}
