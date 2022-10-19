@@ -3,7 +3,7 @@
   "title": "Yearly 5 Year Moving Average of Change in Temperature Compared to Baseline",
   "width": 600,
   "height": 400,
-  "background": "#e5e6df",
+  "background": "#f2f2f0",
   "data": {
     "url": "https://raw.githubusercontent.com/szhangg18/szhangg18.github.io/main/countryYearsMA2.csv"
   },
