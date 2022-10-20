@@ -1,9 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {"text": "Average Yearly Change in Temperature Between 1960 to 2018 Compared to Baseline", "fontSize": 16, "color": "#878787"},
+  "title": {"text": "Average Yearly Change in Temperature Between 1960 to 2018 Compared to Baseline", "fontSize": 16, "color": "#40403e"},
   "width": 600,
   "height": 400,
-  "background": "#e0e0da",
+  "background": "#c9c9c5",
   "projection": {"type": "equalEarth"},
   "data": {
     "url": "https://raw.githubusercontent.com/JiazhouLiu/FIT3179/main/VegaLite/3_choropleth_map/js/ne_110m_admin_0_countries.topojson",
