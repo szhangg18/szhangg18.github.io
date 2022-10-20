@@ -7,7 +7,7 @@
   "data": {
     "url": "https://raw.githubusercontent.com/szhangg18/szhangg18.github.io/main/yearlyAverage.csv"
   },
-  "mark": {"type": "line", "interpolate": "monotone"},
+  "mark": {"type": "line", "interpolate": "monotone","color": "black"},
   "encoding": {
     "x": {"field": "Year", "type": "temporal","axis": {"grid":false}},
     "y": {"field": "Change", "type": "quantitative", "axis": {"grid":false}},
