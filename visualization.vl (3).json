@@ -1,8 +1,8 @@
 {
-  "title": {"text":"Number of Countries Below the Baseline", "fontSize": 20, "color": "#878787"},
+  "title": {"text":"Number of Countries Below the Baseline", "fontSize": 20, "color": "#40403e"},
   "width": 500,
   "height": 300,
-  "background": "#e0e0da",
+  "background": "#c9c9c5",
   "data": {
     "url": "https://raw.githubusercontent.com/szhangg18/szhangg18.github.io/main/underbaseData.csv"
   },
