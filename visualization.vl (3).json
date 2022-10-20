@@ -8,15 +8,15 @@
   },
   "mark": {"type": "line", "interpolate": "monotone","color": "black"},
   "encoding": {
-    "x": {"field": "year", "type": "temporal", "axis": {"grid": false}},
+    "x": {"field": "Year", "type": "temporal", "axis": {"grid": false}},
     "y": {
-      "field": "underbase",
+      "field": "Cold Countries",
       "type": "quantitative",
       "axis": {"grid": false}
     },
     "tooltip": [
-      {"field": "year", "type": "temporal", "title": "Year"},
-      {"field": "underbase", "type": "quantitative"}
+      {"field": "Year", "type": "temporal", "title": "Year"},
+      {"field": "Cold Countries", "type": "quantitative"}
     ]
   },
   "config": {}
