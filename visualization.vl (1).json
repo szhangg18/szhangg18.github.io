@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {"text": "Average Yearly Change in Temperature Between 1960 to 2018 Compared to Baseline", "fontSize": 16, "color": "#fc3f26"},
+  "title": {"text": "Average Yearly Change in Temperature Between 1960 to 2018 Compared to Baseline", "fontSize": 16, "color": "#878787"},
   "width": 600,
   "height": 400,
   "background": "#e0e0da",
