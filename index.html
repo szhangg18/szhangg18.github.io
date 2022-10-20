@@ -108,43 +108,86 @@
               Google &gt; Material Design Lite &gt; How to install MDL
             </div>-->
 
-            <h3 style  = "color:purple; font-family: Tahoma; font-size: 30px; text-align: center;">Global Temperature Trends Since 1960</h3>
-              <p>
-                <b>Global warming - fake news or humanity's biggest threat?</b> <br>
-                <br>
-                This data visualisation will explore exactly how the global temperature has been changing over the past six decades through a series of maps and graphs.
-                To explore this data, a <b>baseline</b> has been defined as the <b>average temperature between 1951 to 1980</b>. All comparative data will use this period as a 
-                baseline for comparison, thus all change refers to change from this period of time. <br><br>
-                <em>Please note all missing data has been replaced with 0, indicating no change since baseline.</em>
-              </p>
-              <div class = "outer">
-                <div class = "inner">
-                    <div id="week9"></div>
-                    <p><u>Figure 1</u> is a choropleth map showing the average of the change in termperatures per month of each country between 
-                      1960 to 2018 compated to the baseline. This clearly shows that every country has become warmer on average over this time period. 
-                      However, from this graph alone it is impossible to tell the trend since the data has been stripped of its temporal component during the calculations.</p>
-                </div>
-                <div class = "inner">
-                    <div id = "line"></div>
-                    <p><u>Figure 2</u> is a line chart of the average change in temperature compared to the baseline of every country by year. 
+            <h1 style  = "color:purple; font-family: Tahoma; font-size: 40px; text-align: center;"><b>Global Temperature Trends Since 1960</b></h1>
+
+
+              <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--1-col"></div>
+                <div class="mdl-cell mdl-cell--10-col"><b>Global warming - fake news or humanity's biggest threat?</b></div>
+              </div>
+
+              <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--1-col"></div>
+                <div class="mdl-cell mdl-cell--10-col">This data visualisation will explore exactly how the global temperature has been changing over the past six decades through a series of maps and graphs.
+                  To explore this data, a <b>baseline</b> has been defined as the <b>average temperature between 1951 to 1980</b>. All comparative data will use this period as a 
+                  baseline for comparison, thus all change refers to change from this period of time. <br><br>
+                  <em>Please note: all missing data has been replaced with 0 which indicates no change since baseline, unless otherwise indicated.</em></div>
+              </div>
+              
+              <h4 style  = "color:purple; font-family: Tahoma; font-size: 17px;"><b>Average Yearly Change in Temperature Between 1960 to 2018 Compared to Baseline</b></h4>
+
+              <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--1-col"></div>
+                <div class="mdl-cell mdl-cell--10-col"><div id="week9"></div></div>
+              </div>
+
+              <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--1-col"></div>
+                <div class="mdl-cell mdl-cell--10-col"><u>Figure 1</u> is a choropleth map showing the average of the change in termperatures per month of each country between 
+                  1960 to 2018 compated to the baseline. This clearly shows that every country has become warmer on average over this time period. 
+                  However, from this graph alone it is impossible to tell the trend since the data has been stripped of its temporal component during the calculations.</div>
+              </div>
+
+              <h4 style  = "color:purple; font-family: Tahoma; font-size: 17px;"><b>Average Change in Temperature From Baseline by Year</b></h4>
+
+                  <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--4-col"><u>Figure 2</u> is a line chart of the average change in temperature compared to the baseline of every country by year. 
                       This temperature has not been normalized for land mass nor population but has excluded all missing data instead of replacing data with a 0. 
-                      The trend over time becomes much more apparent with this graph as the temperature is clearly increasing over time.</p>
-                </div>
-                <div class = "inner">
-                    <div id="week10"></div>
-                    <p><u>Figure 3</u> shows a choropleth with a year filter scale to show the average 
-                        temperatures of each country by year as you move through the slider. This can be used 
-                      to give a visual representation of the temperature of each country by year and it can clearly be seen 
-                    that almost every country becomes warmer over time, and the globe as a whole is becoming warmer.</p>
-                </div>
-                <div class = "inner">
-                  <div id="line2"></div>
-                    <p><u>Figure 4</u> shows a line chart of the number of countries that are below the baseline per year. In other words,
+                      The trend over time becomes much more apparent with this graph as the temperature is clearly increasing over time.</div>
+                    <div class="mdl-cell mdl-cell--8-col"><div id="line"></div></div>
+                  </div>
+
+              
+                  <h4 style  = "color:purple; font-family: Tahoma; font-size: 17px;"><b>10 Year Moving Average of Change in Temperature by Year</b></h4>
+
+
+              <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--1-col"></div>
+                <div class="mdl-cell mdl-cell--10-col"><div id="week10"></div></div>
+              </div>
+
+              <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--1-col"></div>
+                <div class="mdl-cell mdl-cell--10-col"><u>Figure 3</u> shows a choropleth with a year filter scale to show the average 
+                  temperatures of each country by year as you move through the slider. This can be used 
+                to give a visual representation of the temperature of each country by year and it can clearly be seen 
+              that almost every country becomes warmer over time, and the globe as a whole is becoming warmer.</div>
+              </div>
+
+              <h4 style  = "color:purple; font-family: Tahoma; font-size: 17px;"><b>Number of Countries Below Baseline by Year</b></h4>
+                <div class="mdl-grid">
+                  <div class="mdl-cell mdl-cell--4-col"><u>Figure 4</u> shows a line chart of the number of countries that are below the baseline per year. In other words,
                     this shows the number of countries that was actually cooler on average compared to the baseline period. Although 
                   fluctuation can be seen in the early periods of this data, eventually all countries become warmer than the baseline period. 
-                Interestingly in 2017 and 2018, not a single country was colder than the baseline period. </p>
+                Interestingly in 2017 and 2018, not a single country was colder than the baseline period.</div>
+                  <div class="mdl-cell mdl-cell--8-col"><div id="line2"></div></div>
                 </div>
 
+
+                <h4 style  = "color:purple; font-family: Tahoma; font-size: 17px;"><b>So, What Does This All Mean?</b></h4>
+
+                <div class="mdl-grid">
+                  <div class="mdl-cell mdl-cell--1-col"></div>
+                  <div class="mdl-cell mdl-cell--10-col">Scientists across the globe agree the climate has changed significantly in recent years, with change being noticed 
+                    as far back as the industrial revolution in the 1800s (<a href="https://iopscience.iop.org/article/10.1088/1748-9326/11/4/048002">Cook et al., 2016</a>). Despite, climate change being
+                     unable to be proven definitively, the overall concensus among the 
+                    scientific community is that 
+                  it is real, and humans are the cause. <br><br>The symptoms of global warming can be seen across the various diagrams above, though with these data and statistics alone it is impossible to 
+                conclude if it is the cause of humans, or if it is even real, as it could just be part of a larger cyclic cycle. Either way, natural or man-made, the results are definitely 
+              concerning considering some countries went up over 1 degree celcius over the course of 60 years. Therefore, even on the off chance it is human made, it is worth considering investing in more 
+            renewable sources of energy and reducing our daily carbon footprint, one person at a time. </div>
+                </div>
+                
                 
             </div>
             <script type="text/javascript">

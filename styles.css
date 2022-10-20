@@ -121,5 +121,9 @@ h1{
   text-align: center;
   color: #527298
   
-  
+}
+
+div {
+  text-align: justify;
+  text-justify: inter-word;
 }
