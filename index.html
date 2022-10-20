@@ -1,62 +1,196 @@
-<html>
-    <head>
-        <title> FIT3179 Data Vis 2 </title>
-        <link rel = "stylesheet" href = "mystyle.css">
-        <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.8"></script>
-    </head>
+<!doctype html>
+<!--
+  Material Design Lite
+  Copyright 2015 Google Inc. All rights reserved.
 
-    <body>
-        <div>
-            <p style  = "color:purple; font-family: Tahoma; font-size: 30px; text-align: center;">Global Temperature Trends Since 1960</p>
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
 
-            <link href="https://fonts.googleapis.com/css2?family=Fondamento&family=Roboto+Condensed&display=swap" rel="stylesheet">
+      https://www.apache.org/licenses/LICENSE-2.0
 
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License
+-->
+<html lang="en">
+  <head>
+    <!--
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    -->
+
+    <!--<title>Material Design Lite</title>-->
+    
+    <title> FIT3179 Data Vis 2 </title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <!--
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+    -->
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <!--
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+    -->
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <!--
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <link rel="shortcut icon" href="images/favicon.png">
+    -->
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-red.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    #view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+    }
+    </style>
+    <link rel = "stylesheet" href = "mystyle.css">
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.8"></script>
+
+
+
+
+
+  </head>
+  <body>
+    <div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
+      <header class="demo-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">FIT3179 Data Vis 2</span>
+          <div class="mdl-layout-spacer"></div>
+
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+            <!--
+            <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
+              <i class="material-icons">search</i>
+            </label>
+          -->
+            <div class="mdl-textfield__expandable-holder">
+              <!--<input class="mdl-textfield__input" type="text" id="search">
+              <label class="mdl-textfield__label" for="search">Enter your query...</label>-->
+            </div>
+          </div>
         </div>
-        <p>
-            Global warming - fake news or humanity's biggest threat? <br>
-            This data visualisation will explore exactly how the global temperature has been changing over the past six decades through a series of maps and graphs. <br>
-            To explore this data, a <b>baseline</b> will be defined as the average temperature between 1960 to 1980. All comparative data will use this period as a 
-            baseline for comparison.
-            
-        </p>
+      </header>
+      <div class="demo-ribbon"></div>
+      <main class="demo-main mdl-layout__content">
+        <div class="demo-container mdl-grid">
+          <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+          <div class="demo-content mdl-color--grey-100 mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+            <!--<div class="demo-crumbs mdl-color-text--grey-500">
+              Google &gt; Material Design Lite &gt; How to install MDL
+            </div>-->
 
-        <div class = "outer">
-            <div class = "inner">
-                <div id="week9"></div>
-                <p>Figure 1 shows an average of the yearly average temperatures of each country <br>
-                    between 1960 to 2018. It clearly shows that every country is warmer in <br>
-                    this time period compared to the original baseline of 1960 to 1980. <br>
-                    However, from this graph alone it is impossible to tell the trend.</p>
+            <h3 style  = "color:purple; font-family: Tahoma; font-size: 30px; text-align: center;">Global Temperature Trends Since 1960</h3>
+              <p>
+                <b>Global warming - fake news or humanity's biggest threat?</b> <br>
+                <br>
+                This data visualisation will explore exactly how the global temperature has been changing over the past six decades through a series of maps and graphs.
+                To explore this data, a <b>baseline</b> has been defined as the <b>average temperature between 1951 to 1980</b>. All comparative data will use this period as a 
+                baseline for comparison, thus all change refers to change from this period of time. <br><br>
+                <em>Please note all missing data has been replaced with 0, indicating no change since baseline.</em>
+              </p>
+              <div class = "outer">
+                <div class = "inner">
+                    <div id="week9"></div>
+                    <p><u>Figure 1</u> is a choropleth map showing the average of the change in termperatures per month of each country between 
+                      1960 to 2018 compated to the baseline. This clearly shows that every country has become warmer on average over this time period. 
+                      However, from this graph alone it is impossible to tell the trend since the data has been stripped of its temporal component during the calculations.</p>
+                </div>
+                <div class = "inner">
+                    <div id = "line"></div>
+                    <p><u>Figure 2</u> is a line chart of the average change in temperature compared to the baseline of every country by year. 
+                      This temperature has not been normalized for land mass nor population but has excluded all missing data instead of replacing data with a 0. 
+                      The trend over time becomes much more apparent with this graph as the temperature is clearly increasing over time.</p>
+                </div>
+                <div class = "inner">
+                    <div id="week10"></div>
+                    <p><u>Figure 3</u> shows a choropleth with a year filter scale to show the average 
+                        temperatures of each country by year as you move through the slider. This can be used 
+                      to give a visual representation of the temperature of each country by year and it can clearly be seen 
+                    that almost every country becomes warmer over time, and the globe as a whole is becoming warmer.</p>
+                </div>
+                <div class = "inner">
+                  <div id="line2"></div>
+                    <p><u>Figure 4</u> shows a line chart of the number of countries that are below the baseline per year. In other words,
+                    this shows the number of countries that was actually cooler on average compared to the baseline period. Although 
+                  fluctuation can be seen in the early periods of this data, eventually all countries become warmer than the baseline period. 
+                Interestingly in 2017 and 2018, not a single country was colder than the baseline period. </p>
+                </div>
+
+                
             </div>
-            <div class = "inner">
-                <div id = "line"></div>
-                <p>Figure 2 shows a line chart of the average temperature of every country by year. <br>
-                    This clearly indicates an increase of average temperatures
-                over time.  </p>
-            </div>
-            <div class = "inner">
-                <div id="week10"></div>
-                <p>Figure 3 shows a choropleth with a scale filter to show the average <br>
-                    temperatures of each country by year. This can be used to give a <br>
-                visual representation of each country's temperature over time. </p>
-            </div>
-            <div class = "inner">
-                <img src = "https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmFuZG9tfGVufDB8fDB8fA%3D%3D&w=1000&q=80"/>
-                <p>dog4</p>
-            </div>
-            
+            <script type="text/javascript">
+              var vis1 = "https://raw.githubusercontent.com/szhangg18/szhangg18.github.io/main/visualization.vl.json";
+              vegaEmbed('#week10', vis1);
+        
+              var vis2 = "https://raw.githubusercontent.com/szhangg18/szhangg18.github.io/main/visualization.vl%20(1).json";
+              vegaEmbed('#week9', vis2);
+              
+              var vis3 = "https://raw.githubusercontent.com/szhangg18/szhangg18.github.io/main/visualization.vl%20(2).json";
+              vegaEmbed('#line', vis3);
+
+              var vis4 = "https://raw.githubusercontent.com/szhangg18/szhangg18.github.io/main/visualization.vl%20(3).json";
+              vegaEmbed('#line2', vis4);
+
+
+              
+          </script>
+          <!--
+              <p>
+                Commodo nisi non consectetur voluptate incididunt mollit duis dolore amet amet tempor exercitation. Qui amet aute ea aute id ad aliquip proident. Irure duis qui labore deserunt enim in quis nisi sint consequat aliqua. Ex proident labore et laborum tempor fugiat sint magna veniam minim. Nulla dolor labore adipisicing in enim mollit laboris fugiat eu. Aliquip minim cillum ullamco voluptate non dolore non ex duis fugiat duis ad. Deserunt cillum ad et nisi amet non voluptate culpa qui do. Labore ullamco et minim proident est laborum mollit ad labore deserunt ut irure dolore. Reprehenderit ad ad irure ut irure qui est eu velit eu excepteur adipisicing culpa. Laborum cupidatat ullamco eu duis anim reprehenderit proident aute ad consectetur eiusmod.
+              </p>
+
+            <h3>Basic MDL Usage</h3>
+              <p>
+                Cillum dolor esse sit incididunt velit eiusmod magna ad nostrud officia aute dolor dolor. Magna esse ullamco pariatur adipisicing consectetur eu commodo officia. Ex cillum consequat mollit minim elit est deserunt occaecat nisi amet. Quis aliqua nostrud Lorem occaecat sunt. Eiusmod quis amet ullamco aliquip dolore ut incididunt duis adipisicing. Elit consequat nisi eiusmod aute ipsum sunt veniam do est. Occaecat mollit aliquip ut proident consectetur amet ex dolore consectetur aliqua elit.
+              </p>
+            -->
+          </div>
         </div>
-        <script type="text/javascript">
-            var vis1 = "https://raw.githubusercontent.com/szhangg18/szhangg18.github.io/main/visualization.vl.json";
-            vegaEmbed('#week10', vis1);
-      
-            var vis2 = "https://raw.githubusercontent.com/szhangg18/szhangg18.github.io/main/visualization.vl%20(1).json";
-            vegaEmbed('#week9', vis2);
-            
-            var vis3 = "https://raw.githubusercontent.com/szhangg18/szhangg18.github.io/main/visualization.vl%20(2).json";
-            vegaEmbed('#line', vis3);
-        </script>
-    </body>
+        <footer class="demo-footer mdl-mini-footer">
+          <div class="mdl-mini-footer--left-section">
+        <!--
+            <ul class="mdl-mini-footer--link-list">
+              <li><a href="#">Help</a></li>
+              <li><a href="#">Privacy and Terms</a></li>
+              <li><a href="#">User Agreement</a></li>
+            </ul>
+        -->
+          </div>
+        </footer>
+      </main>
+    </div>
+    <!--
+    <a href="https://github.com/google/material-design-lite/blob/mdl-1.x/templates/article/" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">View Source</a>
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  -->
+  </body>
 </html>
