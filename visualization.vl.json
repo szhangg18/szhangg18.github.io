@@ -3,7 +3,7 @@
   "title": {"text": "Yearly 10 Year Moving Average of Change in Temperature Compared to Baseline", "fontSize": 16, "color": "#878787"},
   "width": 600,
   "height": 400,
-  "background": "#e0e0da",
+  "background": "#40403e",
   "data": {
     "url": "https://raw.githubusercontent.com/szhangg18/szhangg18.github.io/main/countryYearsMA2.csv"
   },
