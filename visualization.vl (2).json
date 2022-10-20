@@ -1,9 +1,9 @@
 {
   "title": "",
-  "title": {"text":"Average Change in Temperature From Baseline by Year", "fontSize": 16, "color": "#878787"},
+  "title": {"text":"Average Change in Temperature From Baseline by Year", "fontSize": 16, "color": "#40403e"},
   "width": 500,
   "height": 300,
-  "background": "#e0e0da",
+  "background": "#c9c9c5",
   "data": {
     "url": "https://raw.githubusercontent.com/szhangg18/szhangg18.github.io/main/yearlyAverage.csv"
   },
